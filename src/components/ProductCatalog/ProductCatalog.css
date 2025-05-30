@@ -1,0 +1,41 @@
+.catalog-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .category-filter {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+  
+  .filter-btn {
+    padding: 0.4rem 1rem;
+    border: none;
+    background-color: #fce4ec;
+    color: #d994a8;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter-btn:hover {
+    background-color: #d994a8;
+    color: white;
+  }
+  
+  .filter-btn.active {
+    background-color: #d994a8;
+    color: white;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  

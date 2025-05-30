@@ -1,0 +1,248 @@
+const products = [
+  {
+    id: 1,
+    name: "Vegan Makeup Brush Set",
+    description:
+      "A complete set of cruelty-free makeup brushes made with synthetic fibers.",
+    price: 350.99,
+    category: "Brushes",
+    material: "Vegan",
+    image:
+      "https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=400&q=80",
+  },
+  {
+    id: 2,
+    name: "Jade Facial Roller",
+    description: "Natural jade stone roller for facial massage and skincare.",
+    price: 220.5,
+    category: "Skincare",
+    material: "Stone",
+    image:
+      "https://plus.unsplash.com/premium_photo-1664544673677-d3979e505d90?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmFjaWFsJTIwcm9sbGVyfGVufDB8fDB8fHww",
+  },
+  {
+    id: 3,
+    name: "Silicone Beauty Sponge",
+    description:
+      "Hygienic and easy-to-clean silicone sponge for flawless foundation application.",
+    price: 108.0,
+    category: "Sponges",
+    material: "Silicone",
+    image:
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=400&q=80",
+  },
+  {
+    id: 4,
+    name: "Cruelty-Free Eyeliner",
+    description:
+      "Long-lasting waterproof eyeliner made with natural ingredients.",
+    price: 140.99,
+    category: "Eyes",
+    material: "Natural",
+    image:
+      "https://images.unsplash.com/photo-1503467913725-8484b65b0715?auto=format&fit=crop&w=400&q=80",
+  },
+  {
+    id: 5,
+    name: "Bamboo Handle Makeup Brushes",
+    description:
+      "Eco-friendly brushes with bamboo handles and soft synthetic bristles.",
+    price: 290.99,
+    category: "Brushes",
+    material: "Bamboo",
+    image:
+      "https://plus.unsplash.com/premium_photo-1723489471120-ecd883bb6768?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fG1ha2V1cCUyMGJyc3VofGVufDB8fDB8fHww",
+  },
+  {
+    id: 6,
+    name: "Lip Gloss",
+    description: "Perfect for daily use with a gentle formula.",
+    price: 190.42,
+    category: "Lips",
+    material: "Natural",
+    image: "https://images.unsplash.com/photo-1695634503987-f6f18706708e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGxpcCUyMGdsb3NzfGVufDB8fDB8fHww",
+  },
+  {
+    id: 7,
+    name: "Organic Lip Balm",
+    description: "Crafted with all-natural ingredients and essential oils.",
+    price: 170.93,
+    category: "Lips",
+    material: "Mineral",
+    image: "https://images.unsplash.com/photo-1613405620886-6b6c0bc888c3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG9yZ2FuaWMlMjBsaXAlMjBiYWxtfGVufDB8fDB8fHww",
+  },
+  {
+    id: 8,
+    name: "Matte Lipstick",
+    description: "Perfect for daily use with a gentle formula.",
+    price: 310.97,
+    category: "Lips",
+    material: "Mineral",
+    image: "https://images.unsplash.com/photo-1631214524049-0ebbbe6d81aa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fE1hdHRlJTIwTGlwc3RpY2t8ZW58MHx8MHx8fDA%3D",
+  },
+  {
+    id: 9,
+    name: "Natural Blush",
+    description: "Long-lasting and lightweight with a soft finish.",
+    price: 298.95,
+    category: "Makeup",
+    material: "Organic",
+    image: "https://plus.unsplash.com/premium_photo-1726750867977-44b04195ce08?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Qmx1c2glMjBtYWtldXB8ZW58MHx8MHx8fDA%3D",
+  },
+  {
+    id: 10,
+    name: "Hydrating Foundation",
+    description: "Enriched with vitamins and cruelty-free tested.",
+    price: 146.52,
+    category: "Skincare",
+    material: "Mineral",
+    image:
+      "https://images.unsplash.com/photo-1557205465-f3762edea6d3?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Rm91bmRhdGlvbnxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    id: 11,
+    name: "Mineral Highlighter",
+    description: "Long-lasting and lightweight with a soft finish.",
+    price: 445.55,
+    category: "Makeup",
+    material: "Natural",
+    image:
+      "https://images.unsplash.com/photo-1627260125287-e1124c7a5ecc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8TWluZXJhbCUyMEhpZ2hsaWdodGVyJTIwbWFrZXVwfGVufDB8fDB8fHww",
+  },
+  {
+    id: 12,
+    name: "Volumizing Mascara",
+    description: "Long-lasting and lightweight with a soft finish.",
+    price: 233.18,
+    category: "Eyes",
+    material: "Vegan",
+    image:
+      "https://images.unsplash.com/photo-1631214540553-ff044a3ff1d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8TWFzY2FyYXxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    id: 13,
+    name: "Charcoal Face Mask",
+    description: "Crafted with all-natural ingredients and essential oils.",
+    price: 213.09,
+    category: "Skincare",
+    material: "Bamboo",
+    image:
+      "https://media.istockphoto.com/id/1336742668/photo/cosmetologist-applying-black-mask-on-pretty-woman-face-wearing-black-gloves-gorgeous-woman-in.webp?a=1&b=1&s=612x612&w=0&k=20&c=UTiWv2NZ5MHH9EzUMrR7XTLtNoA1mbpP9NZixHecUmY=",
+  },
+  {
+    id: 14,
+    name: "Rose Water Toner",
+    description: "Perfect for daily use with a gentle formula.",
+    price: 305.51,
+    category: "Makeup",
+    material: "Organic",
+    image: "https://images.unsplash.com/photo-1673869099038-4406331f128f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHJvc2UlMjB3YXRlciUyMHRvbmVyJTIwbWFrZXVwfGVufDB8fDB8fHww",
+  },
+  {
+    id: 15,
+    name: "Aloe Vera Gel",
+    description: "Perfect for daily use with a gentle formula.",
+    price: 1100.98,
+    category: "Skincare",
+    material: "Stone",
+    image: "https://plus.unsplash.com/premium_photo-1661434889227-617f791dd381?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QWxvZSUyMFZlcmElMjBHZWx8ZW58MHx8MHx8fDA%3D",
+  },
+  {
+    id: 16,
+    name: "Coconut Hair Serum",
+    description: "Enriched with vitamins and cruelty-free tested.",
+    price: 1378.36,
+    category: "Hair",
+    material: "Herbal",
+    image:
+      "https://images.unsplash.com/photo-1699373383905-d0eafdffe5c1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8SGFpciUyMFNlcnVtfGVufDB8fDB8fHww",
+  },
+  {
+    id: 17,
+    name: "Argan Oil Hair Mist",
+    description: "Long-lasting and lightweight with a soft finish.",
+    price: 3489.3,
+    category: "Hair",
+    material: "Bamboo",
+    image:
+      "https://images.unsplash.com/photo-1638609269267-f0128098a809?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8QXJnYW4lMjBPaWwlMjBIYWlyJTIwTWlzdHxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    id: 18,
+    name: "Vegan Nail Polish",
+    description: "Crafted with all-natural ingredients and essential oils.",
+    price: 369.46,
+    category: "Nails",
+    material: "Mineral",
+    image: "https://plus.unsplash.com/premium_photo-1684952848389-2c2b58498f7d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8TmFpbCUyMFBvbGlzaHxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    id: 19,
+    name: "Cream Eyeshadow",
+    description: "Crafted with all-natural ingredients and essential oils.",
+    price: 325.06,
+    category: "Eyes",
+    material: "Mineral",
+    image: "https://images.unsplash.com/photo-1625094640367-05f84293fe42?q=80&w=1464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: 20,
+    name: "Bamboo Cotton Pads",
+    description: "Eco-conscious beauty product for sustainable routines.",
+    price: 400.96,
+    category: "Makeup",
+    material: "Stone",
+    image:
+      "https://images.unsplash.com/photo-1563391507496-209fc783d42e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QmFtYm9vJTIwQ290dG9uJTIwUGFkc3xlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    id: 21,
+    name: "Eco Makeup Remover",
+    description: "Perfect for daily use with a gentle formula.",
+    price: 380.43,
+    category: "Makeup",
+    material: "Vegan",
+    image:
+      "https://plus.unsplash.com/premium_photo-1664007603175-1b11f8154bde?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8TWFrZXVwJTIwUmVtb3ZlcnxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    id: 22,
+    name: "Tinted Moisturizer",
+    description: "Long-lasting and lightweight with a soft finish.",
+    price: 4200.05,
+    category: "Makeup",
+    material: "Stone",
+    image:
+      "https://images.unsplash.com/photo-1597931752949-98c74b5b159f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fE1vaXN0dXJpemVyfGVufDB8fDB8fHww",
+  },
+  {
+    id: 23,
+    name: "Sunscreen SPF 50",
+    description: "Long-lasting and lightweight with a soft finish.",
+    price: 1300.42,
+    category: "Skincare",
+    material: "Vegan",
+    image: "https://images.unsplash.com/photo-1654973552952-d0c98a3e3388?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fFN1bnNjcmVlbnxlbnwwfHwwfHx8MA%3D%3D",
+  },
+  {
+    id: 24,
+    name: "Setting Spray",
+    description: "Enriched with vitamins and cruelty-free tested.",
+    price: 280.22,
+    category: "Hair",
+    material: "Organic",
+    image: "https://images.unsplash.com/photo-1746558780335-3321e34d88b3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8U2V0dGluZyUyMFNwcmF5fGVufDB8fDB8fHww",
+  },
+  {
+    id: 25,
+    name: "Makeup Pouch",
+    description: "Eco-conscious beauty product for sustainable routines.",
+    price: 1300.05,
+    category: "Makeup",
+    material: "Organic",
+    image: "https://plus.unsplash.com/premium_photo-1661754333744-38817d55d79a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8TWFrZXVwJTIwUG91Y2h8ZW58MHx8MHx8fDA%3D",
+  },
+];
+  
+  export default products;
+  

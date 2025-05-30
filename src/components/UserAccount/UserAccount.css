@@ -1,0 +1,92 @@
+.user-account {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .account-info label {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    font-weight: 600;
+    color: #444;
+  }
+  
+  .account-info span {
+    font-weight: 400;
+    color: #555;
+    max-width: 60%;
+    text-align: right;
+  }
+  
+  .account-info input,
+  .account-info textarea {
+    max-width: 60%;
+    padding: 0.4rem;
+    border-radius: 6px;
+    border: 1px solid #d994a8;
+  }
+  
+  .account-info textarea {
+    resize: vertical;
+    min-height: 60px;
+  }
+  
+  .account-actions,
+  .edit-btn {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .save-btn,
+  .cancel-btn,
+  .edit-btn {
+    background-color: #d994a8;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cancel-btn {
+    background-color: #f8bbd0;
+    color: #b16b7e;
+  }
+  
+  .save-btn:hover,
+  .edit-btn:hover {
+    background-color: #b16b7e;
+  }
+  
+  .cancel-btn:hover {
+    background-color: #d994a8;
+    color: white;
+  }
+  .order-history {
+    margin-top: 2rem;
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+  }
+  
+  .order-card {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    color: #777;
+  }
+  
+  .order-card h4 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .order-card ul {
+    list-style: disc inside;
+    margin-top: 0.5rem;
+  }
